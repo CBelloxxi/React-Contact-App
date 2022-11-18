@@ -1,13 +1,10 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
-import 'firebase/compat/auth';
-import "firebase/compat/storage";
-import "firebase/compat/database";
-
 import React, {useState, useEffect} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import './AddEdit.css';
 import { toast } from "react-toastify";
+import firebase from 'firebase/compat/app';
+import fireDb from "../firebase.js";
+
 
 const initialState = {
   name: "",
@@ -33,7 +30,7 @@ export const AddEdit = () => {
     if(!name || !email || !contact) {
       toast.error("Please provide value in each input field")
     } else {
-      firebase.child("contacts").push(state, (err) => {
+      fireDb.child("contacts").push(state, (err) => {
         if(err) {
           toast.error(err)
         } else {
@@ -77,7 +74,7 @@ export const AddEdit = () => {
               type="number"
               id="contact"
               name="contact"
-              placeholder="Your Contact Number..."
+              placeolder="Your Contact Number..."
               value={contact}
               onChange={handleInputChange}
             />
