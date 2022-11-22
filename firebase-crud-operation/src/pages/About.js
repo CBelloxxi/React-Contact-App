@@ -1,11 +1,14 @@
 import React from 'react'
 
-export const About = () => {
+const About = () => {
   return (
-    <div>
-      <h2>About</h2>
+    <div style={{ marginTop: "150px"}}>
+      <h2>
+        {" "}
+        This is a React Contact Management System Application with Routing using Firebase.
+      </h2>
     </div>
-  )
-}
+  );
+};
 
 export default About;
