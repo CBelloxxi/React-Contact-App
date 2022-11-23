@@ -22,11 +22,10 @@ function App() {
           <Route path="/update/:id"  element={<AddEdit />}></Route>
           <Route path="/view/:id" element={<View />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/search " element={<Search />}></Route>
+          <Route path="/search" element={<Search />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
-
   );
 }
 

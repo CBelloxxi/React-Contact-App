@@ -8,13 +8,14 @@ const initialState = {
   name: "",
   email: "",
   contact: "",
+  status: ""
 };
 
 export const AddEdit = () => {
   const [state, setState] = useState(initialState);
   const [data, setData] = useState({});
 
-  const {name, email, contact} = state;
+  const {name, email, contact, status} = state;
 
   const navigate = useNavigate();
 
@@ -55,7 +56,7 @@ export const AddEdit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!name || !email || !contact) {
+    if(!name || !email || !contact || !status) {
       toast.error("Please provide value in each input field")
     } else {
       if(!id) {
@@ -117,7 +118,15 @@ export const AddEdit = () => {
               value={contact || ""}
               onChange={handleInputChange}
             />
-
+          <label htmlFor="name">Status</label>
+            <input
+              type="text"
+              id="status"
+              name="status"
+              placeholder="Your Status..."
+              value={status || ""}
+              onChange={handleInputChange}
+            />
           <input type="submit" value={id ? "Update" : "Save"} />
       </form>
     </div>
