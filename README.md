@@ -15,7 +15,7 @@ A contact management app built using React and using Firebase realtime database.
 <li>Delete a contact</li>
 
 <h2>What did I use?</h2>
-<li>Implemented the use of React hooks throughout the project including; useEffect, useState, useParams, useNavigation, useLocation, Link</li>
+<li>React hooks throughout the project including; useEffect, useState, useParams, useNavigation, useLocation, Link</li>
 <li>Used BrowserRouter for routing</li>
 <li>Used toastify for react notifications</li>
 <li>Firebase Realtime database</li>
