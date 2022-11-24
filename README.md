@@ -1,7 +1,7 @@
 # React-Contact-App
 A contact management app built using React and using Firebase realtime database.(Realtime database was used as I am looking to use it for a more appropriate project that is more dependant on realtime reporting and so currently learning how to use the tools)
 
-Table of Contents
+<h2> Table of Contents <h2>
 Built With
 Features
 Future Work
