@@ -69,6 +69,25 @@ export const Home = () => {
 
   return (
     <div style={{marginTop: "100px"}}>
+      <label>Sort By:</label>
+      <select className="dropdown" name="colValue" onChange={handleChange}>
+        <option>Please Select</option>
+        <option value="name">Name</option>
+        <option value="email">Email</option>
+        <option value="contact">Contact</option>
+        <option value="status">Status</option>
+      </select>
+      <button className="btn btn-reset" onClick={handleReset}>
+        Reset
+      </button>
+      <br/>
+      <label>Status:</label>
+      <button className="btn btn-active" onClick={() => filterData("Active")}>
+        Active
+      </button>
+      <button className="btn btn-inactive" onClick={() => filterData("Inactive")}>
+        Inactive
+      </button>
       <table className="styled-table">
           <thead>
             <tr>
@@ -120,25 +139,6 @@ export const Home = () => {
             </tbody>
           )}
       </table>
-      <label>Sort By:</label>
-      <select className="dropdown" name="colValue" onChange={handleChange}>
-        <option>Please Select</option>
-        <option value="name">Name</option>
-        <option value="email">Email</option>
-        <option value="contact">Contact</option>
-        <option value="status">Status</option>
-      </select>
-      <button className="btn btn-reset" onClick={handleReset}>
-        Reset
-      </button>
-      <br/>
-      <label>Status:</label>
-      <button className="btn btn-active" onClick={() => filterData("Active")}>
-        Active
-      </button>
-      <button className="btn btn-inactive" onClick={() => filterData("Inactive")}>
-        Inactive
-      </button>
     </div>
   )
 }
